@@ -14,7 +14,7 @@ now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
 #auth 
 cwd = os.getcwd()
-gs = pygsheets.authorize(client_secret=cwd + 'client_secret.json')
+gs = pygsheets.authorize(client_secret=cwd + '/client_secret.json')
 #df with date time and cmnd line arg
 df = pandas.DataFrame([[today, current_time, value]])
 worksheet = gs.open('idid')
